@@ -26,9 +26,7 @@ A responsive and clean **App Install Landing Page** built using **React** and **
 - 🎯 Clean and modern UI
 - 📦 Easy to plug into any React project
 - 🧠 Built using React + TailwindCSS
-- 🔗 Download buttons for Google Play & App Store
 
 ---
 
-## 📁 Project Structure
 
