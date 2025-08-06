@@ -1,0 +1,68 @@
+# Node modules
+node_modules/
+
+# Vite build output
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+bun.lockb
+
+# Dependency directories
+.pnpm/
+.esbuild/
+.cache/
+.vite/
+
+# Local env files
+.env
+.env.*.local
+.env.local
+
+# Editor folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+*.log
+*.tsbuildinfo
+
+# Optional NPM cache directory
+.npm/
+
+# Tailwind CSS JIT cache
+.tailwindcss/
+
+# Optional: coverage reports
+coverage/
+
+# Optional: eslint cache
+.eslintcache
+
+# Optional: stylelint cache
+.stylelintcache
+
+# Optional: test coverage
+*.lcov
+
+# Optional: Mac QuickLook thumbnail cache
+._*
+
+# Optional: Netlify/Vercel deployment folders
+.netlify/
+.vercel/
+
+# Optional: SvelteKit build output (if ever integrated)
+.svelte-kit/
+
+# Optional: VS Code preview
+.vscode-test/
