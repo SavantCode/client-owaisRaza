@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
-import logo from './assets/logo.png'; // Adjust the path as necessary
+import logo from './assets/logo.jpg'; // Adjust the path as necessary
 import plus18 from './assets/18.png'; // Adjust the path as necessary
+
+import img1 from './assets/screenshot1.jpg'; // Adjust the path as necessary
+import img2 from './assets/screenshot2.jpg'; // Adjust the path as necessary
+import img3 from './assets/screenshot3.jpg'; // Adjust the path as necessary
 import {
   Star,
   Download,
@@ -71,7 +75,7 @@ export default function AppInstallPage() {
         </div>
 
         <div className="flex-1 min-w-0">
-          <h1 className="text-3xl font-normal text-gray-900 mb-1">Bilbet</h1>
+          <h1 className="text-3xl font-normal text-gray-900 mb-1">7StarBet</h1>
           <p className="text-sm text-gray-600 mb-3">विकासकर्ता: बिल्बेट गेमिंग - उत्पादन व्यापार</p>
 
           <div className="flex items-center gap-8 text-sm">
@@ -147,32 +151,26 @@ export default function AppInstallPage() {
         <div className="flex gap-3 overflow-x-auto pb-2">
           <div className="flex-shrink-0 w-48 h-80 rounded-lg overflow-hidden border border-gray-200">
             <img
-              src="https://images.unsplash.com/photo-1596838132731-3301c3fd4317?w=400&h=600&fit=crop&crop=center"
+              src={img1}
               alt="App Screenshot 1"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="flex-shrink-0 w-48 h-80 rounded-lg overflow-hidden border border-gray-200">
             <img
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=600&fit=crop&crop=center"
+              src={img2}
               alt="App Screenshot 2"
               className="w-full h-full object-cover"
             />
           </div>
           <div className="flex-shrink-0 w-48 h-80 rounded-lg overflow-hidden border border-gray-200">
             <img
-              src="https://images.unsplash.com/photo-1606092195730-5d7b9af1efc5?w=400&h=600&fit=crop&crop=center"
+              src={img3}
               alt="App Screenshot 3"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="flex-shrink-0 w-48 h-80 rounded-lg overflow-hidden border border-gray-200">
-            <img
-              src="https://images.unsplash.com/photo-1518611012118-696072aa579a?w=400&h=600&fit=crop&crop=center"
-              alt="App Screenshot 4"
-              className="w-full h-full object-cover"
-            />
-          </div>
+          
         </div>
       </div>
 
@@ -343,7 +341,7 @@ export default function AppInstallPage() {
               {/*div Developer Response */}
               <div className="bg-gray-50 p-4 rounded-lg mt-4">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="font-medium text-sm text-gray-900">Bilbet</span>
+                  <span className="font-medium text-sm text-gray-900">7StarBet</span>
                   <span className="text-xs text-gray-500">September 23, 2024</span>
                 </div>
                 <p className="text-sm text-gray-700">प्रतिक्रिया का लागि धन्यवाद!</p>
@@ -427,7 +425,7 @@ export default function AppInstallPage() {
               {/* Developer Response */}
               <div className="bg-gray-50 p-4 rounded-lg mt-4">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="font-medium text-sm text-gray-900">Bilbet</span>
+                  <span className="font-medium text-sm text-gray-900">7StarBet</span>
                   <span className="text-xs text-gray-500">September 21, 2024</span>
                 </div>
                 <p className="text-sm text-gray-700">तपाईंको सकारात्मक प्रतिक्रिया का लागि धन्यवाद! हामी तपाईंको अनुभवलाई अझ राम्रो बनाउने प्रयासमा लागिरहेका छौं।</p>
@@ -476,7 +474,7 @@ export default function AppInstallPage() {
               {/* Developer Response */}
               <div className="bg-gray-50 p-4 rounded-lg mt-4">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="font-medium text-sm text-gray-900">Bilbet</span>
+                  <span className="font-medium text-sm text-gray-900">7StarBet</span>
                   <span className="text-xs text-gray-500">September 19, 2024</span>
                 </div>
                 <p className="text-sm text-gray-700">हामी तपाईंको अनुभवलाई अझ सहज बनाउन काम गरिरहेका छौं। प्रतिक्रिया को लागि धन्यवाद!</p>
@@ -523,7 +521,7 @@ export default function AppInstallPage() {
               {/* Developer Response */}
               <div className="bg-gray-50 p-4 rounded-lg mt-4">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="font-medium text-sm text-gray-900">Bilbet</span>
+                  <span className="font-medium text-sm text-gray-900">7StarBet</span>
                   <span className="text-xs text-gray-500">September 17, 2024</span>
                 </div>
                 <p className="text-sm text-gray-700">हामीलाई खुशी लाग्यो कि तपाईं सन्तुष्ट हुनुहुन्छ! तपाईंको निरन्तर समर्थनको लागि धन्यवाद।</p>
@@ -546,33 +544,7 @@ export default function AppInstallPage() {
         </div>
       </div>
 
-      {/* Developer Contact */}
-      <footer className="px-6 py-8 border-t border-gray-200 bg-gray-50">
-        <h3 className="text-base font-semibold text-gray-900 mb-4">
-          विकासकर्ताको सम्पर्क ठेगाना
-        </h3>
-
-        <div className="text-sm text-gray-700 space-y-2 leading-relaxed">
-          <div>
-            <span className="font-medium text-gray-800">Email:</span>{' '}
-            <a href="mailto:support@bilbet.com" className="text-green-600 hover:underline">
-              support@bilbet.com
-            </a>
-          </div>
-
-          <div>
-            <span className="font-medium text-gray-800">Website:</span>{' '}
-            <a href="https://www.bilbet.com" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">
-              www.bilbet.com
-            </a>
-          </div>
-
-          <div>
-            <span className="font-medium text-gray-800">Address:</span>{' '}
-            Gaming District, Casino City, NV 89101
-          </div>
-        </div>
-      </footer>
+      
 
     </div>
   );
