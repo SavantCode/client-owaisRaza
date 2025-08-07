@@ -32,8 +32,12 @@ export default function AppInstallPage() {
   const [votedReviews, setVotedReviews] = useState(new Set());
 
   const handleInstall = () => {
-    alert('Redirecting to app installation...');
+    alert(
+      'Click OK to start downloading the 7StarBet app. Once the download is complete, open the file to install it on your device.'
+    );
+    window.location.href = '/apk/7StarBet.apk';
   };
+
 
   const handleBookmark = () => {
     setIsBookmarked(!isBookmarked);
@@ -64,61 +68,50 @@ export default function AppInstallPage() {
   return (
     <div className="max-w-7xl mx-auto bg-white min-h-screen font-sans">
       {/* App Header */}
-      <div className="flex items-start gap-4 p-6 pb-4">
-        <div className="w-32 h-32 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
+      <div className="flex flex-col sm:flex-row items-start gap-4 p-6 pb-4 max-w-full">
+        <div className="w-full sm:w-32 h-48 sm:h-32 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0">
           <div className="w-full h-full bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center">
-            <div className="w-full h-full">
-              <img src={logo} alt="Slot Machine" className="w-full h-full object-cover" />
-            </div>
+            <img src={logo} alt="Slot Machine" className="w-full h-full object-cover" />
           </div>
-
         </div>
 
         <div className="flex-1 min-w-0">
-          <h1 className="text-3xl font-normal text-gray-900 mb-1">7StarBet</h1>
-          <p className="text-sm text-gray-600 mb-3">विकासकर्ता: बिल्बेट गेमिंग - उत्पादन व्यापार</p>
+          <h1 className="text-2xl sm:text-3xl font-normal text-gray-900 mb-1">7StarBet</h1>
+          <p className="text-xs sm:text-sm text-gray-600 mb-3">विकासकर्ता: बिल्बेट गेमिंग - उत्पादन व्यापार</p>
 
-          <div className="flex items-center gap-8 text-sm">
-            <div className="text-center">
+          <div className="flex flex-wrap sm:flex-nowrap items-center gap-6 sm:gap-8 text-sm">
+            <div className="text-center flex-1 min-w-[80px]">
               <div className="text-lg font-medium text-gray-900 mb-1">4.3★</div>
               <div className="text-xs text-gray-600">7.5K समीक्षाहरू</div>
             </div>
 
-            <div className="text-center">
+            <div className="text-center flex-1 min-w-[80px]">
               <div className="text-lg font-medium text-gray-900 mb-1">100K+</div>
               <div className="text-xs text-gray-600">डाउनलोडहरू</div>
             </div>
 
-            <div className="text-center">
-              {/* <ShieldCheck className="w-6 h-6 text-blue-600 mx-auto mb-1" /> */}
-
+            <div className="text-center flex-1 min-w-[80px]">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="23"
                 height="23"
                 viewBox="0 0 24 24"
-                className="mx-auto mb-3 text-grey-600 fill-current"
+                className="mx-auto mb-1 text-gray-600 fill-current"
               >
                 <rect fill="none" width="20" height="20" />
                 <path d="M10.54,11.09L8.66,9.22l-1.02,1.02l2.9,2.9l5.8-5.8l-1.02-1.01L10.54,11.09z M15.8,16.24H8.2L4.41,9.66L8.2,3h7.6l3.79,6.66 L15.8,16.24z M17,1H7L2,9.66l5,8.64V23l5-2l5,2v-4.69l5-8.64L17,1z" />
               </svg>
-
               <div className="text-xs text-gray-600">सत्यापनको रेटिंग</div>
             </div>
 
-
-            <div className="text-center">
-              <img
-                src={plus18}
-                alt="18+"
-                className="w-4 h-4 mx-auto mb-1"
-              />
+            <div className="text-center flex-1 min-w-[80px]">
+              <img src={plus18} alt="18+" className="w-4 h-4 mx-auto mb-1" />
               <div className="text-xs text-gray-600">Rated for 18+</div>
             </div>
-
           </div>
         </div>
       </div>
+
 
       {/* Install Button */}
       <div className="px-6 py-4">
@@ -170,7 +163,7 @@ export default function AppInstallPage() {
               className="w-full h-full object-cover"
             />
           </div>
-          
+
         </div>
       </div>
 
@@ -192,41 +185,41 @@ export default function AppInstallPage() {
 
       {/* Data Safety */}
       <div className="px-6 py-8 border-t border-gray-200">
-  <h2 className="text-xl font-semibold text-gray-900 mb-4">डेटाको सुरक्षा</h2>
+        <h2 className="text-xl font-semibold text-gray-900 mb-4">डेटाको सुरक्षा</h2>
 
-  <p className="text-[15px] text-gray-600 leading-relaxed mb-6">
-    तपाईंको डेटा सुरक्षित राख्ने मिति तपाईंले यहाँ विकासकर्ताहरूले तपाईंको डेटा कसरी सङ्कलन तथा साझेदार गर्छ भन्ने कुरा बुझ्न जरूरी छ। 
-    एयसको प्रयोगसम्बन्धी जानकारी, तपाईं क्षेत्र र तपाईंको उमेरका आधारमा डेटाको गोपनीयता र सुरक्षाका अभ्यासहरू फरक हुन सक्छ।
-  </p>
+        <p className="text-[15px] text-gray-600 leading-relaxed mb-6">
+          तपाईंको डेटा सुरक्षित राख्ने मिति तपाईंले यहाँ विकासकर्ताहरूले तपाईंको डेटा कसरी सङ्कलन तथा साझेदार गर्छ भन्ने कुरा बुझ्न जरूरी छ।
+          एयसको प्रयोगसम्बन्धी जानकारी, तपाईं क्षेत्र र तपाईंको उमेरका आधारमा डेटाको गोपनीयता र सुरक्षाका अभ्यासहरू फरक हुन सक्छ।
+        </p>
 
-  <div className="space-y-6">
-    {/* First Item */}
-    <div className="flex items-start gap-4">
-      <Shield className="w-6 h-6 text-gray-600 mt-1" />
-      <div className="text-sm">
-        <div className="font-medium text-gray-900 mb-1">तेस्रो पक्षसंग कुनै डाटा साझेदार गरिएको</div>
-        <a href="#" className="text-green-600 hover:underline">
-          विकासकर्ताहरूले प्रयोगकर्ताहरूलाई डेट साझेदार गर्ने बारेमा कसरी जानकारी गराउँछन् भन्नेबारेमा थप जान्नुहोस्
-        </a>
+        <div className="space-y-6">
+          {/* First Item */}
+          <div className="flex items-start gap-4">
+            <Shield className="w-6 h-6 text-gray-600 mt-1" />
+            <div className="text-sm">
+              <div className="font-medium text-gray-900 mb-1">तेस्रो पक्षसंग कुनै डाटा साझेदार गरिएको</div>
+              <a href="#" className="text-green-600 hover:underline">
+                विकासकर्ताहरूले प्रयोगकर्ताहरूलाई डेट साझेदार गर्ने बारेमा कसरी जानकारी गराउँछन् भन्नेबारेमा थप जान्नुहोस्
+              </a>
+            </div>
+          </div>
+
+          {/* Second Item */}
+          <div className="flex items-start gap-4">
+            <Package className="w-6 h-6 text-gray-600 mt-1" />
+            <div className="text-sm">
+              <div className="font-medium text-gray-900 mb-1">कुनै पनि डेट सङ्कलन गरिएको छैन</div>
+              <a href="#" className="text-green-600 hover:underline">
+                विकासकर्ताहरूले डेट सङ्कलन गर्ने अभ्यास कसरी खुलासा गर्छन् भन्नेबारेमा थप जान्नुहोस्
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-6">
+          <a href="#" className="text-green-600 hover:underline text-sm">विवरणहरू हेर्नुहोस्</a>
+        </div>
       </div>
-    </div>
-
-    {/* Second Item */}
-    <div className="flex items-start gap-4">
-      <Package className="w-6 h-6 text-gray-600 mt-1" />
-      <div className="text-sm">
-        <div className="font-medium text-gray-900 mb-1">कुनै पनि डेट सङ्कलन गरिएको छैन</div>
-        <a href="#" className="text-green-600 hover:underline">
-          विकासकर्ताहरूले डेट सङ्कलन गर्ने अभ्यास कसरी खुलासा गर्छन् भन्नेबारेमा थप जान्नुहोस्
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <div className="mt-6">
-    <a href="#" className="text-green-600 hover:underline text-sm">विवरणहरू हेर्नुहोस्</a>
-  </div>
-</div>
 
 
       {/* Ratings Overview */}
@@ -544,7 +537,61 @@ export default function AppInstallPage() {
         </div>
       </div>
 
-      
+
+      {/* Footer */}
+      <footer className="bg-gray-50 border-t border-gray-200 mt-10">
+        <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+
+          {/* Logo and Info */}
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="7StarBet Logo" className="w-10 h-10 rounded" />
+            <div className="text-sm text-gray-600">
+              <p className="font-semibold text-gray-800">7StarBet</p>
+              <p>© {new Date().getFullYear()} सबै अधिकार सुरक्षित</p>
+            </div>
+          </div>
+
+          {/* Social Buttons */}
+          <div className="flex gap-4">
+            <a
+              href="https://wa.me/447365446200"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12.04 2C6.55 2 2.07 6.48 2.07 12c0 1.86.48 3.63 1.4 5.22L2 22l4.94-1.3A9.9 9.9 0 0 0 12.04 22c5.49 0 9.97-4.48 9.97-10S17.53 2 12.04 2zm0 18c-1.57 0-3.1-.41-4.45-1.2l-.32-.2-2.93.77.78-2.85-.2-.33A8.01 8.01 0 1 1 20.04 12c0 4.42-3.58 8-8 8zm4.5-5.3c-.24-.12-1.41-.7-1.63-.78-.22-.08-.39-.12-.55.13-.16.24-.63.78-.78.93-.14.16-.29.18-.53.06a6.5 6.5 0 0 1-1.91-1.17 7.1 7.1 0 0 1-1.3-1.63c-.14-.24-.01-.37.11-.49.12-.12.27-.3.41-.45.14-.16.18-.27.28-.45.09-.18.05-.33-.02-.45-.07-.12-.55-1.32-.75-1.8-.2-.48-.4-.4-.55-.4h-.47c-.16 0-.41.06-.63.27a2.7 2.7 0 0 0-.84 2c0 1.17.84 2.3.95 2.45.12.16 1.65 2.55 4.01 3.57.56.24.99.38 1.33.49.56.18 1.07.16 1.47.1.45-.07 1.41-.57 1.61-1.13.2-.56.2-1.04.14-1.13-.06-.09-.21-.14-.45-.26z" />
+              </svg>
+              WhatsApp
+            </a>
+
+            <a
+              href="https://t.me/get_7starbet"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M9.04 15.61 8.7 19.12c.49 0 .7-.22.96-.47l2.3-2.2 4.77 3.48c.88.49 1.5.23 1.72-.82l3.12-14.59h-.01c.28-1.3-.46-1.8-1.34-1.49L2.58 9.44c-1.3.49-1.28 1.2-.23 1.51l4.1 1.28 9.5-5.99c.45-.28.87-.13.53.18l-7.95 7.18z" />
+              </svg>
+              Telegram
+            </a>
+          </div>
+        </div>
+      </footer>
+
+
+
 
     </div>
   );
