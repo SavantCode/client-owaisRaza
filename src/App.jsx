@@ -86,7 +86,7 @@ export default function AppInstallPage() {
           </div>
 
           {/* App name and developer info */}
-          <div className="flex flex-col text-left" style={{ paddingBottom: '30px' }}>
+          <div className="flex flex-col text-left" style={{ paddingBottom: '21px' }}>
             <h1 className="text-lg sm:text-2xl font-semibold text-gray-900 tracking-wide leading-snug">
               7StarBet
             </h1>
