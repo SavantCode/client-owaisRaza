@@ -100,39 +100,40 @@ export default function AppInstallPage() {
         {/* Icons row */}
         <div className="flex flex-nowrap items-center justify-between gap-4 sm:gap-6 text-sm overflow-x-auto">
 
-          {/* Rating */}
-          <div className="text-center flex-1 min-w-[80px]">
-            <div className="text-base font-medium text-gray-900 mb-1">4.3★</div>
-            <div className="text-xs text-gray-600">7.5K समीक्षाहरू</div>
-          </div>
+  {/* Rating */}
+  <div className="text-center flex-1 min-w-[80px]">
+    <div className="text-base font-medium text-gray-900 mb-1">4.3★</div>
+    <div className="text-xs text-gray-600">7.5K समीक्षाहरू</div>
+  </div>
 
-          {/* Downloads */}
-          <div className="text-center flex-1 min-w-[80px]">
-            <div className="text-base font-medium text-gray-900 mb-1">100K+</div>
-            <div className="text-xs text-gray-600">डाउनलोडहरू</div>
-          </div>
+  {/* Downloads */}
+  <div className="text-center flex-1 min-w-[80px] border-l border-gray-300 pl-4">
+    <div className="text-base font-medium text-gray-900 mb-1">100K+</div>
+    <div className="text-xs text-gray-600">डाउनलोडहरू</div>
+  </div>
 
-          {/* Verification */}
-          <div className="text-center flex-1 min-w-[80px]">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              className="mx-auto mb-1 text-gray-600 fill-current"
-            >
-              <rect fill="none" width="20" height="20" />
-              <path d="M10.54,11.09L8.66,9.22l-1.02,1.02l2.9,2.9l5.8-5.8l-1.02-1.01L10.54,11.09z M15.8,16.24H8.2L4.41,9.66L8.2,3h7.6l3.79,6.66 L15.8,16.24z M17,1H7L2,9.66l5,8.64V23l5-2l5,2v-4.69l5-8.64L17,1z" />
-            </svg>
-            <div className="text-xs text-gray-600">सत्यापनको रेटिंग</div>
-          </div>
+  {/* Verification */}
+  <div className="text-center flex-1 min-w-[80px] border-l border-gray-300 pl-4">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      className="mx-auto mb-1 text-gray-600 fill-current"
+    >
+      <rect fill="none" width="20" height="20" />
+      <path d="M10.54,11.09L8.66,9.22l-1.02,1.02l2.9,2.9l5.8-5.8l-1.02-1.01L10.54,11.09z M15.8,16.24H8.2L4.41,9.66L8.2,3h7.6l3.79,6.66 L15.8,16.24z M17,1H7L2,9.66l5,8.64V23l5-2l5,2v-4.69l5-8.64L17,1z" />
+    </svg>
+    <div className="text-xs text-gray-600">सत्यापनको रेटिंग</div>
+  </div>
 
-          {/* 18+ */}
-          <div className="text-center flex-1 min-w-[80px] hidden sm:block">
-            <img src={plus18} alt="18+" className="w-4 h-4 mx-auto mb-1" />
-            <div className="text-xs text-gray-600">Rated for 18+</div>
-          </div>
-        </div>
+  {/* 18+ */}
+  <div className="text-center flex-1 min-w-[80px] border-l border-gray-300 pl-4 hidden sm:block">
+    <img src={plus18} alt="18+" className="w-4 h-4 mx-auto mb-1" />
+    <div className="text-xs text-gray-600">Rated for 18+</div>
+  </div>
+</div>
+
 
       </div>
 
