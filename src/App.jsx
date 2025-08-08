@@ -68,69 +68,73 @@ export default function AppInstallPage() {
   return (
     <div className="max-w-7xl mx-auto bg-white min-h-screen font-sans">
       {/* App Header */}
-      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 p-6 pb-4 max-w-full">
-  
-  {/* Logo with grey shimmer effect */}
-  <div className="w-32 h-32 sm:w-32 sm:h-32 rounded-lg overflow-hidden border border-gray-200 flex-shrink-0 relative">
-    {/* Greyish placeholder */}
-    <div className="absolute inset-0 bg-gray-200 animate-pulse"></div>
+      <div className="w-full p-6 pb-4 max-w-full flex flex-col gap-4">
 
-    {/* Logo image */}
-    <img
-      src={logo}
-      alt="Slot Machine"
-      className="w-full h-full object-cover relative z-10"
-      onLoad={(e) => e.target.previousSibling.remove()} // Remove placeholder when loaded
-    />
-  </div>
+        {/* Top row: Logo and name/details side-by-side always */}
+        <div className="flex flex-row items-center gap-4">
 
-  {/* Details Section */}
-  <div className="flex-1 min-w-0 text-center sm:text-left">
-    <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-3 tracking-wide leading-relaxed">
-      7StarBet
-    </h1>
-    <p className="text-xs sm:text-sm text-gray-500 mb-6 leading-loose">
-      विकासकर्ता: बिल्बेट गेमिंग - उत्पादन व्यापार
-    </p>
+          {/* Logo */}
+          <div className="w-16 sm:w-20 md:w-24 aspect-square rounded-lg overflow-hidden border border-gray-200 flex-shrink-0 relative">
+            <div className="absolute inset-0 bg-gray-200 animate-pulse"></div>
+            <img
+              src={logo}
+              alt="Slot Machine"
+              className="w-full h-full object-cover relative z-10"
+              onLoad={(e) => e.target.previousSibling.remove()}
+            />
+          </div>
 
-    {/* Icons Row */}
-    <div className="flex flex-nowrap items-center justify-between gap-4 sm:gap-6 text-sm overflow-x-auto">
-      
-      {/* Rating */}
-      <div className="text-center flex-1 min-w-[80px]">
-        <div className="text-base font-medium text-gray-900 mb-1">4.3★</div>
-        <div className="text-xs text-gray-600">7.5K समीक्षाहरू</div>
+          {/* App name and developer info */}
+          <div className="flex flex-col text-left">
+            <h1 className="text-lg sm:text-2xl font-semibold text-gray-900 tracking-wide leading-snug">
+              7StarBet
+            </h1>
+            <p className="text-xs sm:text-sm text-gray-500 mt-1 leading-relaxed">
+              विकासकर्ता: बिल्बेट गेमिंग - उत्पादन व्यापार
+            </p>
+          </div>
+
+        </div>
+
+        {/* Icons row */}
+        <div className="flex flex-nowrap items-center justify-between gap-4 sm:gap-6 text-sm overflow-x-auto">
+
+          {/* Rating */}
+          <div className="text-center flex-1 min-w-[80px]">
+            <div className="text-base font-medium text-gray-900 mb-1">4.3★</div>
+            <div className="text-xs text-gray-600">7.5K समीक्षाहरू</div>
+          </div>
+
+          {/* Downloads */}
+          <div className="text-center flex-1 min-w-[80px]">
+            <div className="text-base font-medium text-gray-900 mb-1">100K+</div>
+            <div className="text-xs text-gray-600">डाउनलोडहरू</div>
+          </div>
+
+          {/* Verification */}
+          <div className="text-center flex-1 min-w-[80px]">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              className="mx-auto mb-1 text-gray-600 fill-current"
+            >
+              <rect fill="none" width="20" height="20" />
+              <path d="M10.54,11.09L8.66,9.22l-1.02,1.02l2.9,2.9l5.8-5.8l-1.02-1.01L10.54,11.09z M15.8,16.24H8.2L4.41,9.66L8.2,3h7.6l3.79,6.66 L15.8,16.24z M17,1H7L2,9.66l5,8.64V23l5-2l5,2v-4.69l5-8.64L17,1z" />
+            </svg>
+            <div className="text-xs text-gray-600">सत्यापनको रेटिंग</div>
+          </div>
+
+          {/* 18+ */}
+          <div className="text-center flex-1 min-w-[80px] hidden sm:block">
+            <img src={plus18} alt="18+" className="w-4 h-4 mx-auto mb-1" />
+            <div className="text-xs text-gray-600">Rated for 18+</div>
+          </div>
+        </div>
+
       </div>
 
-      {/* Downloads */}
-      <div className="text-center flex-1 min-w-[80px]">
-        <div className="text-base font-medium text-gray-900 mb-1">100K+</div>
-        <div className="text-xs text-gray-600">डाउनलोडहरू</div>
-      </div>
-
-      {/* Verification */}
-      <div className="text-center flex-1 min-w-[80px]">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          className="mx-auto mb-1 text-gray-600 fill-current"
-        >
-          <rect fill="none" width="20" height="20" />
-          <path d="M10.54,11.09L8.66,9.22l-1.02,1.02l2.9,2.9l5.8-5.8l-1.02-1.01L10.54,11.09z M15.8,16.24H8.2L4.41,9.66L8.2,3h7.6l3.79,6.66 L15.8,16.24z M17,1H7L2,9.66l5,8.64V23l5-2l5,2v-4.69l5-8.64L17,1z" />
-        </svg>
-        <div className="text-xs text-gray-600">सत्यापनको रेटिंग</div>
-      </div>
-
-      {/* 18+ */}
-      <div className="text-center flex-1 min-w-[80px] hidden sm:block">
-        <img src={plus18} alt="18+" className="w-4 h-4 mx-auto mb-1" />
-        <div className="text-xs text-gray-600">Rated for 18+</div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
